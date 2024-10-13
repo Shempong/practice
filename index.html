@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Midterm Layout</title>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="logo">
+                <img src="image/logo1.png" alt="logo">
+                <span>Simple</span>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+            <a href="#" class="contact-btn" id="contact-btn">Contact Us</a>
+        </nav>     
+    </div>
+    
+    <section class="hero">
+        <h1>Search engine optimisation &<br> Marketing.</h1>
+        <p>Simple is a simple template with a creative design that solves all your marketing and SEO queries.</p>
+        <div class="btn-container">
+            <a href="#" class="get-started" onclick="cancel()">Get started</a>
+            <a href="#" class="learn-more" onclick="learn()">Learn more</a>
+        </div>
+        <div class="brksly">
+            <img src="image/02.png" alt="pic">
+        </div>
+        <div class="message" id="message"></div>
+    </section>
+    <script>
+        document.getElementById('contact-btn').addEventListener('click', function(event) {
+            document.body.classList.toggle('dark-theme');
+        });
+
+        function cancel() {
+            for (let i = 0; i < 5; i++) {
+                const popUpText = document.createElement('div');
+                popUpText.className = 'pop-up-text';
+                popUpText.textContent = 'Ako pa rin ba?';
+                popUpText.style.top = `${Math.random() * 90}vh`;
+                popUpText.style.left = `${Math.random() * 90}vw`;
+                document.body.appendChild(popUpText);
+                setTimeout(() => popUpText.remove(), 3000);
+            }
+        }
+
+        function learn() {
+            for (let i = 0; i < 5; i++) {
+                const popUpText = document.createElement('div');
+                popUpText.className = 'pop-up-text';
+                popUpText.textContent = 'imissyou';
+                popUpText.style.top = `${Math.random() * 90}vh`;
+                popUpText.style.left = `${Math.random() * 90}vw`;
+                document.body.appendChild(popUpText);
+                setTimeout(() => popUpText.remove(), 3000);
+            }
+        }
+
+        function showMessage(message) {
+            document.getElementById('message').textContent = message;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-container {
+    width: 100%;
+    background-position: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+nav {
+    margin-top: 1rem;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+
+}
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #e00000;
+}
+
+.contact-btn {
+    background-color: #248bfa;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+.hero{
+    text-align: center;
+    margin-top: 30px;
+    background-color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+
+.btn-container a {
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.get-started {
+    background-color: #ff7f7f;
+    color: #c73b3b;
+}
+
+.learn-more {
+    background-color: #a4f3f0;
+    color: #5fbbb8;
+}
+
+.get-started:hover {
+    background-color: #c73b3b;
+    color: #ff7f7f;
+}
+
+.learn-more:hover {
+    background-color: #5fbbb8;
+    color: #a4f3f0;
+}
+.brksly img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+    
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 16px;
+}
+.pop-up-text {
+    position: absolute;
+    color: #1f1f1f;
+    font-size: 18px;
+    animation: fadeMove 3s linear infinite;
+}
+@keyframes fadeMove {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+body.dark-theme {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+body.dark-theme .nav-container {
+    background-color: #1f1f1f;
+}
+
+body.dark-theme nav ul li a {
+    color: #ffffff;
+}
+
+body.dark-theme nav ul li a:hover {
+    color: #e00000;
+}
+
+body.dark-theme .contact-btn {
+    background-color: #0056b3;
+}
+
+body.dark-theme .get-started:hover {
+    background-color: #c73b3b;
+    color: #ff7f7f;
+}
+
+body.dark-theme .learn-more:hover {
+    background-color: #5fbbb8;
+    color: #a4f3f0;
+}
+
+body.dark-theme section {
+    background-color: #1f1f1f;
+}
+
+body.dark-theme section p {
+    background-color: #1f1f1f;
+    color: #a7a9be;
+}
+
+body.dark-theme section h1 {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+body.dark-theme .pop-up-text {
+    color: red;
+}
