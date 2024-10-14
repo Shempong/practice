@@ -130,7 +130,7 @@ nav ul li a:hover {
 }
 .pop-up-text {
     position: absolute;
-    color: red;
+    color: rgb(255, 0, 0);
     font-size: 18px;
     animation: fadeMove 3s linear infinite;
 }
