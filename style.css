@@ -40,6 +40,11 @@ nav {
     margin-top: 2px;
 }
 
+
+nav ul.active {
+    display: block; /* Show when active */
+}
+
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -203,6 +208,10 @@ nav ul li a:hover {
     .hero p {
         font-size: 1.3rem;
     }
+
+    .contact-btn {
+        padding: 8px 18px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -222,6 +231,10 @@ nav ul li a:hover {
         font-size: 1rem;
         font-weight: bold;
         margin-top: 2px;
+    }
+
+    .contact-btn {
+        padding: 6px 16px;
     }
 }
 
@@ -289,4 +302,21 @@ input[type="submit"] {
     cursor: pointer;
     font-size: 15px;
     text-transform: uppercase;
+}
+
+.success-msg { 
+    position: fixed;
+    top: 10%;
+    right: 20px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 3px;
+    display: none;
+    z-index: 1000;
+    color: #270;
+    background-color: #DFF2BF;
+}
+
+.success-msg i {
+    margin-right: 8px;
 }
