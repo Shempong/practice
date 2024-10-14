@@ -4,12 +4,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+body {
+    background-color: rgb(200,200,200);
+}
 .nav-container {
     width: 100%;
     background-position: center;
     padding: 0 10%;
     overflow: hidden;
+    background-color: rgb(200,200,200);
 }
 
 nav {
@@ -47,7 +50,7 @@ nav ul li {
 nav ul li a {
     display: inline-block;
     text-decoration: none;
-    color: #333;
+    color: rgb(20,20,20);
     font-weight: 600;
 }
 
@@ -70,7 +73,7 @@ nav ul li a:hover {
 .hero{
     text-align: center;
     margin-top: 30px;
-    background-color: #ffffff;
+    background-color: rgb(200,200,200);
 }
 
 .hero h1 {
@@ -80,7 +83,7 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 1.2rem;
-    color: #666;
+    color: rgb(20,20,20);
 }
 
 .btn-container {
@@ -127,7 +130,7 @@ nav ul li a:hover {
 }
 .pop-up-text {
     position: absolute;
-    color: #1f1f1f;
+    color: #f0ff20;
     font-size: 18px;
     animation: fadeMove 3s linear infinite;
 }
@@ -138,7 +141,7 @@ nav ul li a:hover {
 
 body.dark-theme {
     background-color: #1f1f1f;
-    color: #ffffff;
+    color: rgb(200,200,200);
 }
 
 body.dark-theme .nav-container {
@@ -147,11 +150,10 @@ body.dark-theme .nav-container {
 
 body.dark-theme nav ul {
     background-color: #1f1f1f;
-    margin-top: 20px;
 }
 
 body.dark-theme nav ul li a {
-    color: #ffffff;
+    color: rgb(200,200,200);
 }
 
 body.dark-theme nav ul li a:hover {
@@ -183,7 +185,7 @@ body.dark-theme section p {
 
 body.dark-theme section h1 {
     background-color: #1f1f1f;
-    color: #fff;
+    color: rgb(200,200,200);
 }
 
 body.dark-theme .pop-up-text {
@@ -203,12 +205,26 @@ body.dark-theme .pop-up-text {
     .menu-toggle {
         display: block;
     }
+
+    nav ul li a.contact-btn {
+        background-color: #248bfa; 
+        color: rgb(200,200,200);
+        padding: 10px;
+        border-radius: 3px;
+        display: block;
+        text-align: center; 
+        margin: 10px 0; 
+    }
+
+    nav ul li a.contact-btn:hover {
+        background-color: #0056b3;
+    }
     
     nav ul {
         display: none; 
         flex-direction: column; 
         position: absolute; 
-        background-color: white; 
+        background-color: rgb(200,200,200);
         width: 100%; 
         top: 60px; 
         left: 0;
