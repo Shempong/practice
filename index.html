@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Midterm Layout</title>
 </head>
@@ -19,6 +20,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Testimonials</a></li>
+                <li></li>
             </ul>
             <a href="#contactModal" class="contact-btn" id="contact-btn">Contact Us</a>
         </nav>     
@@ -54,6 +56,10 @@
                 </div>
             </div>
         </div>
+        <div class="success-msg" id="successMessage" style="display: none;">
+            <i class="fa fa-check"></i>
+            <span id="successText"></span>
+        </div>
     </div>
     <script>
 
@@ -61,7 +67,7 @@
             for (let i = 0; i < 5; i++) {
                 const popUpText = document.createElement('div');
                 popUpText.className = 'pop-up-text';
-                popUpText.textContent = 'Kupal ka ba boss?';
+                popUpText.textContent = 'Kupal ka ba?';
                 popUpText.style.top = `${Math.random() * 90}vh`;
                 popUpText.style.left = `${Math.random() * 90}vw`;
                 document.body.appendChild(popUpText);
@@ -98,6 +104,35 @@
                 navList.classList.remove("active"); 
             }
         });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const firstName = event.target[0].value;
+            const lastName = event.target[1].value;
+            const subject = event.target[2].value;
+
+            // Basic validation
+            if (!firstName || !lastName || !subject) {
+                showMessage("Please fill in all fields.");
+                return;
+            }
+
+            // Show confirmation message
+            showMessage(`Thank you, ${firstName} ${lastName}! This is a success message.`);
+            document.getElementById('contactModal').style.display = 'none';
+            event.target.reset();
+        });
+
+        function showMessage(message) {
+            const successMessageDiv = document.getElementById('successMessage');
+            const successText = document.getElementById('successText');
+            successText.textContent = message;
+            successMessageDiv.style.display = 'block';
+            setTimeout(() => {
+                successMessageDiv.style.display = 'none';
+            }, 5000);
+        }
     </script>
     
 </body>
