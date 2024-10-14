@@ -130,66 +130,13 @@ nav ul li a:hover {
 }
 .pop-up-text {
     position: absolute;
-    color: #f0ff20;
+    color: #0400ff;
     font-size: 18px;
     animation: fadeMove 3s linear infinite;
 }
 @keyframes fadeMove {
     0% { opacity: 1; }
     100% { opacity: 0; }
-}
-
-body.dark-theme {
-    background-color: #1f1f1f;
-    color: rgb(200,200,200);
-}
-
-body.dark-theme .nav-container {
-    background-color: #1f1f1f;
-}
-
-body.dark-theme nav ul {
-    background-color: #1f1f1f;
-}
-
-body.dark-theme nav ul li a {
-    color: rgb(200,200,200);
-}
-
-body.dark-theme nav ul li a:hover {
-    color: #e00000;
-}
-
-body.dark-theme .contact-btn {
-    background-color: #0056b3;
-}
-
-body.dark-theme .get-started:hover {
-    background-color: #c73b3b;
-    color: #ff7f7f;
-}
-
-body.dark-theme .learn-more:hover {
-    background-color: #5fbbb8;
-    color: #a4f3f0;
-}
-
-body.dark-theme section {
-    background-color: #1f1f1f;
-}
-
-body.dark-theme section p {
-    background-color: #1f1f1f;
-    color: #a7a9be;
-}
-
-body.dark-theme section h1 {
-    background-color: #1f1f1f;
-    color: rgb(200,200,200);
-}
-
-body.dark-theme .pop-up-text {
-    color: red;
 }
 
 .menu-toggle {
@@ -276,4 +223,70 @@ body.dark-theme .pop-up-text {
         font-weight: bold;
         margin-top: 2px;
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.wrapper {
+    margin: 90px auto;
+    padding: 20px;
+    background: #e7e7e7;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+}
+.wrapper h2 {
+    margin-top: 0;
+    color: #333;
+}
+.wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.wrapper .close:hover {
+    color: #06D85F;
+}
+.container {
+    padding: 20px 0;
+}
+form label {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+input[type="submit"] {
+    background-color: #413b3b;
+    color: #fff;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
 }
