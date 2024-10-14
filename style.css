@@ -184,3 +184,75 @@ body.dark-theme section h1 {
 body.dark-theme .pop-up-text {
     color: red;
 }
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 872px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        background-color: white; 
+        width: 100%; 
+        top: 60px; 
+        left: 0;
+        z-index: 100; 
+    }
+    
+    nav ul.active {
+        display: flex; 
+    }
+    
+    nav ul li {
+        margin: 10px 0; 
+        text-align: center; 
+    }
+
+    .logo img {
+        width: 35px;
+    }
+    
+    .logo span {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 2px;
+    }
+    .hero h1 {
+        font-size: 2em; 
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero h1 {
+        font-size: 1.5em; 
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        width: 30px;
+    }
+    
+    .logo span {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 2px;
+    }
+}
