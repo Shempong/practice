@@ -145,6 +145,11 @@ body.dark-theme .nav-container {
     background-color: #1f1f1f;
 }
 
+body.dark-theme nav ul {
+    background-color: #1f1f1f;
+    margin-top: 20px;
+}
+
 body.dark-theme nav ul li a {
     color: #ffffff;
 }
