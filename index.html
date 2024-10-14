@@ -45,7 +45,7 @@
             for (let i = 0; i < 5; i++) {
                 const popUpText = document.createElement('div');
                 popUpText.className = 'pop-up-text';
-                popUpText.textContent = 'Ako pa rin ba?';
+                popUpText.textContent = 'Kupal ka ba?';
                 popUpText.style.top = `${Math.random() * 90}vh`;
                 popUpText.style.left = `${Math.random() * 90}vw`;
                 document.body.appendChild(popUpText);
@@ -57,7 +57,7 @@
             for (let i = 0; i < 5; i++) {
                 const popUpText = document.createElement('div');
                 popUpText.className = 'pop-up-text';
-                popUpText.textContent = 'imissyou';
+                popUpText.textContent = 'Ako pa rin ba?';
                 popUpText.style.top = `${Math.random() * 90}vh`;
                 popUpText.style.left = `${Math.random() * 90}vw`;
                 document.body.appendChild(popUpText);
@@ -71,14 +71,15 @@
 
         function myFunction() {
             var navList = document.querySelector("nav ul");
-            navList.classList.toggle("active"); 
+            navList.classList.toggle("active");
         }
         document.addEventListener('click', function(event) {
             var navList = document.querySelector("nav ul");
             var menuToggle = document.getElementById('menu-toggle');
 
+            
             if (!navList.contains(event.target) && !menuToggle.contains(event.target)) {
-                navList.classList.remove("active");
+                navList.classList.remove("active"); 
             }
         });
     </script>
