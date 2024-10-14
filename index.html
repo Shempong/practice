@@ -13,6 +13,7 @@
                 <img src="image/logo1.png" alt="logo">
                 <span>Simple</span>
             </div>
+            <div class="menu-toggle" id="menu-toggle" onclick="myFunction()">&#9776;</div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -67,6 +68,11 @@
         function showMessage(message) {
             document.getElementById('message').textContent = message;
         }
+
+        function myFunction() {
+    var navList = document.querySelector("nav ul");
+    navList.classList.toggle("active");
+}
     </script>
     
 </body>
