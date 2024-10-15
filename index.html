@@ -20,17 +20,20 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Testimonials</a></li>
-                <li></li>
             </ul>
             <a href="#contactModal" class="contact-btn" id="contact-btn">Contact Us</a>
         </nav>     
     </div>
     
     <section class="hero">
+        <div class="success-msg" id="successMessage" style="display: none;">
+            <i class="fa fa-check"></i>
+            <span id="successText"></span>
+        </div>
         <h1>Search engine optimisation &<br> Marketing.</h1>
         <p>Simple is a simple template with a creative design that solves all your marketing and SEO queries.</p>
         <div class="btn-container">
-            <a href="#" class="get-started" onclick="cancel()">Get started</a>
+            <a href="#" class="get-started" onclick="started()">Get started</a>
             <a href="#" class="learn-more" onclick="learn()">Learn more</a>
         </div>
         <div class="brksly">
@@ -46,9 +49,9 @@
                 <div class="container">
                     <form id="contactForm">
                         <label>First Name</label>
-                        <input placeholder="Your name.." type="text" required>
+                        <input placeholder="First Name" type="text" required>
                         <label>Last Name</label>
-                        <input placeholder="Your last name.." type="text" required>
+                        <input placeholder="Last Name" type="text" required>
                         <label>Subject</label> 
                         <textarea placeholder="Write something.." required></textarea>
                         <input type="submit" value="Submit">
@@ -56,14 +59,10 @@
                 </div>
             </div>
         </div>
-        <div class="success-msg" id="successMessage" style="display: none;">
-            <i class="fa fa-check"></i>
-            <span id="successText"></span>
-        </div>
     </div>
     <script>
 
-        function cancel() {
+        function started() {
             for (let i = 0; i < 5; i++) {
                 const popUpText = document.createElement('div');
                 popUpText.className = 'pop-up-text';
@@ -104,29 +103,28 @@
                 navList.classList.remove("active"); 
             }
         });
-        
+
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
+        event.preventDefault();
+        
             const firstName = event.target[0].value;
             const lastName = event.target[1].value;
             const subject = event.target[2].value;
 
-            if (!firstName || !lastName || !subject) {
-                showMessage("Please fill in all fields.");
-                return;
-            }
 
-            showMessage(`Thank you, ${firstName} ${lastName}! This is a success message.`);
+            showMessage(`Thank you, ${firstName} ${lastName}! Your message was successfully sent.`);
             document.getElementById('contactModal').style.display = 'none';
             event.target.reset();
         });
 
         function showMessage(message) {
+
             const successMessageDiv = document.getElementById('successMessage');
             const successText = document.getElementById('successText');
+
             successText.textContent = message;
             successMessageDiv.style.display = 'block';
+            
             setTimeout(() => {
                 successMessageDiv.style.display = 'none';
             }, 5000);
