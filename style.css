@@ -152,6 +152,92 @@ nav ul li a:hover {
     margin-right: 10px;
 }
 
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.wrapper {
+    margin: 10% auto;
+    padding: 20px;
+    background: #e7e7e7;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+.wrapper h2 {
+    margin-top: 0;
+    color: #333;
+}
+.wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.wrapper .close:hover {
+    color: #06D85F;
+}
+.container {
+    padding: 20px 0;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+input[type="submit"] {
+    width: 100%;
+    background-color: #413b3b;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.success-msg { 
+    position: fixed;
+    top: 10%;
+    right: 10px;
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    color: #270;
+    background-color: rgba(223, 242, 191, 0.9);
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 872px) {
     .menu-toggle {
@@ -236,87 +322,18 @@ nav ul li a:hover {
     .contact-btn {
         padding: 6px 16px;
     }
-}
 
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-}
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
-.wrapper {
-    margin: 90px auto;
-    padding: 20px;
-    background: #e7e7e7;
-    border-radius: 5px;
-    width: 30%;
-    position: relative;
-}
-.wrapper h2 {
-    margin-top: 0;
-    color: #333;
-}
-.wrapper .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-}
-.wrapper .close:hover {
-    color: #06D85F;
-}
-.container {
-    padding: 20px 0;
-}
-form label {
-    text-transform: uppercase;
-    font-weight: 500;
-}
-input[type=text], textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-}
-input[type="submit"] {
-    background-color: #413b3b;
-    color: #fff;
-    padding: 15px 50px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 15px;
-    text-transform: uppercase;
-}
+    .wrapper {
+        padding: 15px;
+        width: 95%;
+    }
 
-.success-msg { 
-    position: fixed;
-    top: 10%;
-    right: 20px;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 3px;
-    display: none;
-    z-index: 1000;
-    color: #270;
-    background-color: #DFF2BF;
-}
+    input[type="submit"] {
+        padding: 12px;
+    }
 
-.success-msg i {
-    margin-right: 8px;
+    .success-msg {
+        right: 5px;
+        padding: 10px;
+    }
 }
