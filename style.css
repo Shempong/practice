@@ -262,7 +262,7 @@ input[type="submit"] {
         display: none; 
         flex-direction: column; 
         position: absolute; 
-        background-color: rgb(200,200,200);
+        background-color: rgb(200,200,200,0.5);
         width: 100%; 
         top: 60px; 
         left: 0;
