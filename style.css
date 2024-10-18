@@ -35,11 +35,11 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 2px;
+    transition: color 0.3s ease;
 }
 
 .logo span:hover {
     color: #e00000;
-    transition: 0.3s;
 }
 
 
@@ -59,11 +59,11 @@ nav ul li a {
     text-decoration: none;
     color: rgb(20,20,20);
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #e00000;
-    transition: 0.3s;
 }
 
 .contact-btn {
@@ -72,11 +72,11 @@ nav ul li a:hover {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 3px;
+    transition: background-color 0.5s ease;
 }
 
 .contact-btn:hover {
     background-color: #0056b3;
-    transition: 0.3s;
 }
 
 .hero{
@@ -110,28 +110,37 @@ nav ul li a:hover {
 .get-started {
     background-color: #ff7f7f;
     color: #c73b3b;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .learn-more {
     background-color: #a4f3f0;
     color: #5fbbb8;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .get-started:hover {
     background-color: #c73b3b;
     color: #ff7f7f;
-    transition: 0.3s;
 }
 
 .learn-more:hover {
     background-color: #5fbbb8;
     color: #a4f3f0;
-    transition: 0.3s;
 }
 .brksly img {
     width: 100%;
     max-width: 500px;
-    margin-top: 10px; 
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease; 
+    -moz-transition: transform 0.3s ease;
+}
+
+.brksly img:hover {
+    transform: scale(1.05) ;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
 }
 
 .message {
@@ -140,7 +149,7 @@ nav ul li a:hover {
 }
 .pop-up-text {
     position: absolute;
-    color: rgb(255, 0, 0);
+    color: black;
     font-size: 18px;
     text-shadow: 
                 0 0 5px rgba(255, 102, 0, 0.5),
