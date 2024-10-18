@@ -4,15 +4,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body {
-    background-color: rgb(200,200,200);
-}
 .nav-container {
     width: 100%;
     background-position: center;
     padding: 0 10%;
     overflow: hidden;
-    background-color: rgb(200,200,200);
+    background-color:#fff;
 }
 
 nav {
@@ -40,9 +37,14 @@ nav {
     margin-top: 2px;
 }
 
+.logo span:hover {
+    color: #e00000;
+    transition: 0.3s;
+}
+
 
 nav ul.active {
-    display: block; /* Show when active */
+    display: block; 
 }
 
 nav ul li {
@@ -61,6 +63,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #e00000;
+    transition: 0.3s;
 }
 
 .contact-btn {
@@ -73,12 +76,13 @@ nav ul li a:hover {
 
 .contact-btn:hover {
     background-color: #0056b3;
+    transition: 0.3s;
 }
 
 .hero{
     text-align: center;
     margin-top: 30px;
-    background-color: rgb(200,200,200);
+    background-color:#fff;
 }
 
 .hero h1 {
@@ -116,17 +120,18 @@ nav ul li a:hover {
 .get-started:hover {
     background-color: #c73b3b;
     color: #ff7f7f;
+    transition: 0.3s;
 }
 
 .learn-more:hover {
     background-color: #5fbbb8;
     color: #a4f3f0;
+    transition: 0.3s;
 }
 .brksly img {
     width: 100%;
     max-width: 500px;
-    margin-top: 10px;
-    
+    margin-top: 10px; 
 }
 
 .message {
@@ -137,6 +142,13 @@ nav ul li a:hover {
     position: absolute;
     color: rgb(255, 0, 0);
     font-size: 18px;
+    text-shadow: 
+                0 0 5px rgba(255, 102, 0, 0.5),
+                0 0 10px rgba(255, 102, 0, 0.7),
+                0 0 15px rgba(255, 0, 0, 0.9),
+                0 0 20px rgba(255, 0, 0, 1),
+                0 0 30px rgba(255, 102, 0, 0.5),
+                0 0 40px rgba(255, 204, 0, 0.6);
     animation: fadeMove 3s linear infinite;
 }
 @keyframes fadeMove {
@@ -246,7 +258,7 @@ input[type="submit"] {
 
     nav ul li a.contact-btn {
         background-color: #248bfa; 
-        color: rgb(200,200,200);
+        color: #fff;
         padding: 10px;
         border-radius: 3px;
         display: block;
@@ -262,9 +274,10 @@ input[type="submit"] {
         display: none; 
         flex-direction: column; 
         position: absolute; 
-        background-color: rgb(200,200,200,0.5);
+        background-color: #fff;
         width: 100%; 
         top: 60px; 
+        margin-top: 5%;
         left: 0;
         z-index: 100; 
     }
@@ -292,11 +305,18 @@ input[type="submit"] {
     }
 
     .hero p {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        max-width: 700px;
+        margin: 0px 10px 0px;
+        width: 100%;
     }
 
     .contact-btn {
         padding: 8px 18px;
+    }
+
+    .brksly img {
+        max-width: 450px;
     }
 }
 
@@ -321,6 +341,10 @@ input[type="submit"] {
 
     .contact-btn {
         padding: 6px 16px;
+    }
+
+    .brksly img {
+        max-width: 400px;
     }
 
     .wrapper {
